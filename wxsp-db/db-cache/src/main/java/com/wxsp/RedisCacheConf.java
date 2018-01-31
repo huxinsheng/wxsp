@@ -15,7 +15,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import java.lang.reflect.Method;
 
 /**
- * Created by Ason on 2017/9/25.
+ * @author HuXinsheng
  * 这里实现CachingConfigurerSupport主要是方便使用自定义keyGenerator
  */
 @Configuration

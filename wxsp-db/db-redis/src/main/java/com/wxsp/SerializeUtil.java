@@ -7,7 +7,7 @@ import java.io.ObjectOutputStream;
 
 /**
  * 定义序列化
- * Created by Ason on 2017-09-23.
+ * @author HuXinsheng
  */
 public class SerializeUtil {
 

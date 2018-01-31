@@ -16,7 +16,7 @@ spring:
 #    config:
 #      server:
 #        git:
-#          uri: https://gitee.com/Ason_5/ason-spring-cloud/
+#          uri: https://github.com/huxinsheng/wxsp
 #          searchPaths: config-server/config-repo
 #          username:  username
 #          password:  password

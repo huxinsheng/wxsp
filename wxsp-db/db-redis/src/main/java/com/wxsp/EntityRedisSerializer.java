@@ -5,7 +5,7 @@ import org.springframework.data.redis.serializer.SerializationException;
 
 /**
  * 自定义Redis序列化
- * Created by Ason on 2017-09-23.
+ * @author HuXinsheng
  */
 public class EntityRedisSerializer implements RedisSerializer<Object> {
     @Override

@@ -13,7 +13,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 import redis.clients.jedis.JedisPoolConfig;
 
 /**
- * Created by Ason on 2017-09-23.
+ * @author HuXinsheng
  */
 @Configuration
 public class RedisConf {

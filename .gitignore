@@ -5,8 +5,6 @@
 # IntelliJ project files
 .idea
 *.iml
-out
-gen
 /wxsp-common/target/
 /wxsp-config-server/target/
 /wxsp-core-service/target/
