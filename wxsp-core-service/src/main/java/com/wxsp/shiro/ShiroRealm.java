@@ -2,8 +2,8 @@ package com.wxsp.shiro;
 
 import com.wxsp.cache.CacheService;
 import com.wxsp.entity.rms.vo.RmsUserVo;
-import com.wxsp.service.RmsRoleService;
-import com.wxsp.service.RmsUserService;
+import com.wxsp.service.SysRoleService;
+import com.wxsp.service.SysUserService;
 import com.wxsp.utils.BlankUtil;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
@@ -26,11 +26,11 @@ public class ShiroRealm extends AuthorizingRealm {
 
     @Autowired
     @Lazy
-    private RmsUserService rmsUserService;
+    private SysUserService sysUserService;
 
     @Autowired
     @Lazy
-    private RmsRoleService rmsRoleService;
+    private SysRoleService sysRoleService;
 
     @Autowired
     /**

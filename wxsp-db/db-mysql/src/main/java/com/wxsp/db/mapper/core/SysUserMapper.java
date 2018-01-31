@@ -1,14 +1,12 @@
-package com.wxsp.db.mapper.rms;
+package com.wxsp.db.mapper.core;
 
 import com.wxsp.entity.rms.po.RmsUser;
 import com.wxsp.entity.rms.vo.RmsUserVo;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.baomidou.mybatisplus.plugins.pagination.Pagination;
 import org.apache.ibatis.annotations.Mapper;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -21,7 +19,7 @@ import java.util.Map;
  */
 @Mapper
 @Component
-public interface RmsUserMapper extends BaseMapper<RmsUser> {
+public interface SysUserMapper extends BaseMapper<RmsUser> {
     /**
      * 分页查询用户列表
      * @param page

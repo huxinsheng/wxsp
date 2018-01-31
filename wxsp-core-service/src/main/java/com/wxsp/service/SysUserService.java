@@ -3,7 +3,7 @@ package com.wxsp.service;
 import com.wxsp.cache.CacheService;
 import com.wxsp.core.exception.RmsException;
 import com.wxsp.core.exception.RmsExceptionEnum;
-import com.wxsp.db.mapper.rms.RmsUserMapper;
+import com.wxsp.db.mapper.core.SysUserMapper;
 import com.wxsp.entity.rms.po.RmsUser;
 import com.wxsp.entity.rms.vo.RmsUserVo;
 import com.wxsp.enums.RmsUserSexEnum;
@@ -30,12 +30,12 @@ import java.util.*;
  * @since 2017-09-07
  */
 @Service
-public class RmsUserService extends ServiceImpl<RmsUserMapper, RmsUser> {
+public class SysUserService extends ServiceImpl<SysUserMapper, RmsUser> {
 
-    private static final Logger log = LoggerFactory.getLogger(RmsUserService.class);
+    private static final Logger log = LoggerFactory.getLogger(SysUserService.class);
 
     @Autowired
-    private RmsUserMapper rmsUserMapper;
+    private SysUserMapper sysUserMapper;
 
     @Autowired
     private CacheService cacheService;
@@ -49,7 +49,7 @@ public class RmsUserService extends ServiceImpl<RmsUserMapper, RmsUser> {
     public Page<Map<String, Object>> selectUserList(Integer currentPage, Integer showCount) {
         Page<Map<String, Object>> page = new Page<>(currentPage, showCount);
         List<Map<String, Object>> rmsUserList = new ArrayList<>();
-        for (RmsUserVo rmsUserVo : rmsUserMapper.selectUserList(page)) {
+        for (RmsUserVo rmsUserVo : sysUserMapper.selectUserList(page)) {
             Map<String, Object> ruv = new HashMap(16);
             ruv.put("id", rmsUserVo.getId());
             ruv.put("name", rmsUserVo.getName());
@@ -99,7 +99,7 @@ public class RmsUserService extends ServiceImpl<RmsUserMapper, RmsUser> {
     public RmsUserVo selectUserById(Integer id) {
         // 自动提交事务
         SqlSession sqlSession = factory.openSession(true);
-        RmsUserMapper rmsUserMapper = sqlSession.getMapper(RmsUserMapper.class);
+        SysUserMapper rmsUserMapper = sqlSession.getMapper(SysUserMapper.class);
         Map<String, Object> paramsMap = new HashMap<>(16);
         paramsMap.put("id", id);
         RmsUserVo rmsUser = rmsUserMapper.selectOneUser(paramsMap);

@@ -8,7 +8,7 @@ package com.wxsp.constant;
 public class ApiConstant {
     // =====================RMS begin====================
 
-    public static final String RMS = "/rms";
+    public static final String RMS = "/core";
 
     public static final String RMS_USER = RMS + "/user";
 

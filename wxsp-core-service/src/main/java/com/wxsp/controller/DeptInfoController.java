@@ -2,7 +2,7 @@ package com.wxsp.controller;
 
 
 import com.wxsp.constant.ApiConstant;
-import com.wxsp.service.RmsMenuService;
+import com.wxsp.service.DeptInfoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,17 +11,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
- * 菜单表 前端控制器
+ * 部门表 前端控制器
  * </p>
  *
  * @author HuXinsheng
  * @since 2017-09-07
  */
 @RestController
-@RequestMapping(ApiConstant.RMS_MENU)
-public class RmsMenuController {
-    private static final Logger log = LoggerFactory.getLogger(RmsMenuController.class);
+@RequestMapping(ApiConstant.RMS_DEPT)
+public class DeptInfoController {
+    private static final Logger log = LoggerFactory.getLogger(DeptInfoController.class);
 
     @Autowired
-    private RmsMenuService rmsMenuService;
+    private DeptInfoService deptInfoService;
 }

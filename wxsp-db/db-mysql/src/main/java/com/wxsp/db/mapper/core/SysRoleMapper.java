@@ -1,19 +1,19 @@
-package com.wxsp.db.mapper.rms;
+package com.wxsp.db.mapper.core;
 
-import com.wxsp.entity.rms.po.RmsMenu;
+import com.wxsp.entity.rms.po.RmsRole;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Component;
 
 /**
  * <p>
-  * 菜单表 Mapper 接口
+  * 角色表 Mapper 接口
  * </p>
  *
  * @since 2017-09-07
  */
 @Mapper
 @Component
-public interface RmsMenuMapper extends BaseMapper<RmsMenu> {
+public interface SysRoleMapper extends BaseMapper<RmsRole> {
 
 }

@@ -5,7 +5,7 @@ import com.wxsp.cache.CacheService;
 import com.wxsp.constant.ApiConstant;
 import com.wxsp.entity.rms.po.RmsUser;
 import com.wxsp.result.ResultBody;
-import com.wxsp.service.RmsUserService;
+import com.wxsp.service.SysUserService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,11 +25,11 @@ import javax.validation.Valid;
  */
 @RestController
 @RequestMapping(ApiConstant.RMS_USER)
-public class RmsUserController {
-    private static final Logger log = LoggerFactory.getLogger(RmsUserController.class);
+public class SysUserController {
+    private static final Logger log = LoggerFactory.getLogger(SysUserController.class);
 
     @Autowired
-    private RmsUserService rmsUserService;
+    private SysUserService sysUserService;
 
     @Autowired
     private RedisService redisService;
@@ -46,7 +46,7 @@ public class RmsUserController {
         if (bindingResult.hasErrors()) {
             return ResultBody.error(bindingResult.getFieldError().getDefaultMessage());
         }
-        rmsUserService.addOrUpdateUser(rmsUser);
+        sysUserService.addOrUpdateUser(rmsUser);
         return ResultBody.success();
     }
 
@@ -58,7 +58,7 @@ public class RmsUserController {
     public String findAllUser(
             @RequestParam(value = "showCount", required = false, defaultValue = "10") Integer showCount,
             @RequestParam(value = "currentPage", required = false, defaultValue = "1") Integer currentPage) throws Exception {
-        return ResultBody.success(rmsUserService.selectUserList(currentPage, showCount));
+        return ResultBody.success(sysUserService.selectUserList(currentPage, showCount));
     }
 
     /**
@@ -69,7 +69,7 @@ public class RmsUserController {
         if (bindingResult.hasErrors()) {
             return ResultBody.error(bindingResult.getFieldError().getDefaultMessage());
         }
-        rmsUserService.addOrUpdateUser(rmsUser);
+        sysUserService.addOrUpdateUser(rmsUser);
         return ResultBody.success();
     }
 
@@ -78,7 +78,7 @@ public class RmsUserController {
      */
     @GetMapping(value = "/{id}", produces = "application/json;charset=UTF-8")
     public String findUserById(@PathVariable("id") Integer id) throws Exception {
-        return ResultBody.success(rmsUserService.selectUserById(id));
+        return ResultBody.success(sysUserService.selectUserById(id));
     }
 
     /**
@@ -86,7 +86,7 @@ public class RmsUserController {
      */
     @PostMapping(value = "/account", produces = "application/json;charset=UTF-8")
     public String findUserByAccout(@RequestParam("account") String account) throws Exception {
-        return ResultBody.success(rmsUserService.selectUserByAccout(account));
+        return ResultBody.success(sysUserService.selectUserByAccout(account));
     }
 
     /**
@@ -94,7 +94,7 @@ public class RmsUserController {
      */
     @DeleteMapping(value = "/{id}", produces = "application/json;charset=UTF-8")
     public String deleteUserById(@PathVariable("id") Integer id) throws Exception {
-        if (rmsUserService.deleteById(id)) {
+        if (sysUserService.deleteById(id)) {
             return ResultBody.success();
         }
         return ResultBody.error();

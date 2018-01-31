@@ -1,4 +1,4 @@
-package com.wxsp.db.mapper.rms;
+package com.wxsp.db.mapper.core;
 
 import com.wxsp.entity.rms.po.RmsDept;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
@@ -14,6 +14,6 @@ import org.springframework.stereotype.Component;
  */
 @Mapper
 @Component
-public interface RmsDeptMapper extends BaseMapper<RmsDept> {
+public interface DeptInfoMapper extends BaseMapper<RmsDept> {
 
 }
