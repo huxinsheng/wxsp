@@ -31,10 +31,10 @@
 		ru.status as status,
 		ru.create_time as createTime,
 		ru2.name as createUserName
-		FROM rms_user ru
-		LEFT JOIN rms_role rr ON ru.role_id = rr.id
-		LEFT JOIN rms_dept rd ON ru.dept_id = rd.id
-		LEFT JOIN rms_user ru2 ON ru.create_user_id = ru2.id
+		FROM sys_user ru
+		LEFT JOIN sys_role rr ON ru.role_id = rr.id
+		LEFT JOIN dept_info rd ON ru.dept_id = rd.id
+		LEFT JOIN sys_user ru2 ON ru.create_user_id = ru2.id
 	</select>
 
 	<select id="selectOneUser" resultType="com.wxsp.entity.rms.vo.RmsUserVo">
@@ -51,10 +51,10 @@
 		ru.status as status,
 		ru.create_time as createTime,
 		ru2.name as createUserName
-		FROM rms_user ru
-		LEFT JOIN rms_role rr ON ru.role_id = rr.id
-		LEFT JOIN rms_dept rd ON ru.dept_id = rd.id
-		LEFT JOIN rms_user ru2 ON ru.create_user_id = ru2.id
+		FROM sys_user ru
+		LEFT JOIN sys_role rr ON ru.role_id = rr.id
+		LEFT JOIN dept_info rd ON ru.dept_id = rd.id
+		LEFT JOIN sys_user ru2 ON ru.create_user_id = ru2.id
 		WHERE 1 = 1
 		<if test="id != null">
 			and ru.id = #{id}

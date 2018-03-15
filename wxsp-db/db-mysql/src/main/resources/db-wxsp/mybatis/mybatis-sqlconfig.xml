@@ -40,7 +40,7 @@
         <setting name="jdbcTypeForNull" value="OTHER"/>
         <setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode,toString"/>
         <!--打印sql语句-->
-        <setting name="logPrefix" value="dao."/>
+        <setting name="logPrefix" value="mapper."/>
     </settings>
 
 </configuration>

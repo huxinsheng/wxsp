@@ -23,6 +23,6 @@ eureka:
 
 
 logging:
-  config: classpath:logback/logback-${spring.profiles.active}.xml
-  path: d:/logs/
+  config: classpath:logback/logback-config.xml
+  path: wxmp
   file: wxmp-core-service.log
