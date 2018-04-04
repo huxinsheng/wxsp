@@ -1,8 +1,8 @@
 # ====================basis.connection====================
 basis.connection:
-  url: jdbc:mysql://192.168.1.134:3306/wxsp_db?useUnicode=true&characterEncoding=utf8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=true
-  username: root
-  password: lvban.321
+  url: jdbc:mysql://120.78.157.109:3306/wxsp?useUnicode=true&characterEncoding=utf8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Hongkong&useSSL=true
+  username: wxsp_test
+  password: wxsp_test
 
 
 # =======================basis.druid======================
@@ -46,9 +46,9 @@ basis.druid:
   #  防御sql注入的filter:wall
   filters: stat
   # 访问的用户名
-  loginUsername: root
+  loginUsername: wxsp_test
   # 访问的密码
-  loginPassword: lvban.321
+  loginPassword: wxsp_test
 
 
 # ====================MybatisPlus====================
@@ -98,3 +98,34 @@ mongo:
     userName:
     password:
     dbName: newdb
+
+spring:
+  freemarker:
+    allow-request-override: false
+    allow-session-override: false
+    cache: false
+    charset: UTF-8
+    check-template-location: true
+    content-type: text/html
+    enabled: true
+    expose-request-attributes: false
+    expose-session-attributes: false
+    expose-spring-macro-helpers: true
+    prefer-file-system-access: false
+    suffix: .ftl
+    template-loader-path: file:///E:/devwork/wxsp/wxsp-manage-ui/wxsp-admin/
+    settings.template_update_delay: 0
+    settings.default_encoding: UTF-8
+    settings.url_escaping_charset: UTF-8
+    settings.classic_compatible: true
+    settings.number_format: ###
+    order: 1
+    request-context-attribute: ctx
+  resources:
+    static-locations: file:///E:/devwork/wxsp/wxsp-manage-ui/wxsp-admin/assets/
+  mvc:
+    static-path-pattern: /assets/**
+
+wxsp:
+  env:
+    storeDir: c:/temp
