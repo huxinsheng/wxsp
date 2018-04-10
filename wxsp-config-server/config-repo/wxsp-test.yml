@@ -1,8 +1,8 @@
 # ====================basis.connection====================
 basis.connection:
-  url: jdbc:mysql://localhost:3306/wxmps_test?useUnicode=true&characterEncoding=utf8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Hongkong&useSSL=true
-  username: root
-  password: 8888
+  url: jdbc:mysql://120.78.157.109:3306/wxsp?useUnicode=true&characterEncoding=utf8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Hongkong&useSSL=true
+  username: wxsp_test
+  password: wxsp_test
 
 
 # =======================basis.druid======================
@@ -46,9 +46,9 @@ basis.druid:
   #  防御sql注入的filter:wall
   filters: stat
   # 访问的用户名
-  loginUsername: root
+  loginUsername: wxsp_test
   # 访问的密码
-  loginPassword: 8888
+  loginPassword: wxsp_test
 
 
 # ====================MybatisPlus====================
