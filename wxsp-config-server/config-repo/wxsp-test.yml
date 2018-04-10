@@ -113,7 +113,7 @@ spring:
       expose-spring-macro-helpers: true
       prefer-file-system-access: false
       suffix: .ftl
-      template-loader-path: file:///E:/devwork/wxsp/wxsp-manage-ui/layui/
+      template-loader-path: /opt/server/wxsp-manage-ui/wxsp-admin/
       settings.template_update_delay: 0
       settings.default_encoding: UTF-8
       settings.url_escaping_charset: UTF-8
@@ -122,10 +122,10 @@ spring:
       order: 1
       request-context-attribute: ctx
     resources:
-      static-locations: file:///E:/devwork/wxsp/wxsp-manage-ui/layui/assets/
+      static-locations: /opt/server/wxsp-manage-ui/wxsp-admin/assets/
     mvc:
       static-path-pattern: /assets/**
 
 wxsp:
   env:
-    storeDir: c:/temp
+    storeDir: /usr/local/uploadfile
