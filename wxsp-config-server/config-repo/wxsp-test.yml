@@ -128,4 +128,14 @@ spring:
 
 wxsp:
   env:
-    storeDir: /usr/local/uploadfile
+    store:
+      dir: /usr/local/uploadfiles
+    upload:
+      server: localhost
+      port: 8081
+    weixin:
+      server: localhost
+      port: 8882
+    manage:
+      server: localhost
+      port: 8888
