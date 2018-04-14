@@ -128,6 +128,8 @@ spring:
 
 wxsp:
   env:
+    system:
+      env: test
     store:
       dir: /usr/local/uploadfiles
     upload:
