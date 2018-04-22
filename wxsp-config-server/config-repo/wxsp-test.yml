@@ -133,11 +133,5 @@ wxsp:
     store:
       dir: /usr/local/uploadfiles
     upload:
-      server: localhost
+      server: 120.78.157.109
       port: 8081
-    weixin:
-      server: localhost
-      port: 8882
-    manage:
-      server: localhost
-      port: 8888
